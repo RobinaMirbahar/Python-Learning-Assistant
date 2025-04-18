@@ -131,7 +131,7 @@ Once the chatbot is running, you can try asking any of the following Python-rela
 - "What is the difference between a tuple and a list?"
 - "How do you create a class in Python?"
 - "Explain recursion in Python with a code example."
-- "What are decorators in Python?"**
+- "What are decorators in Python?"
 - "How does Python handle memory management?"
 - "What is the purpose of the `self` keyword in Python?"
 - "How can you handle exceptions in Python?"
