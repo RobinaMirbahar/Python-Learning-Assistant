@@ -127,7 +127,7 @@ pip install google-generativeai
 Once the chatbot is running, you can try asking any of the following Python-related questions to learn and explore:
 
 - "What is a lambda function in Python?"
-- "Explain list comprehensions with examples."**
+- "Explain list comprehensions with examples."
 - "What is the difference between a tuple and a list?"
 - "How do you create a class in Python?"
 - "Explain recursion in Python with a code example."
