@@ -96,6 +96,32 @@ Then open `.streamlit/secrets.toml` and paste your API key in the correct format
 
 ---
 
+## 📦 Requirements
+
+- Python 3.9+
+- `streamlit`
+- `google-generativeai`
+
+---
+
+## ✅ Fix: Install the Missing Package
+
+If you see an error like:
+
+```text
+ModuleNotFoundError: No module named 'google.generativeai'
+```
+
+You need to install the `google-generativeai` package.
+
+Run this in your terminal:
+
+```bash
+pip install google-generativeai
+```
+
+---
+
 ## 🧪 Example Prompts
 
 Try asking:
@@ -129,3 +155,4 @@ Google Cloud Innovator Champion | Women Techmakers Ambassador
 
 🧠 Empowering communities with AI and Cloud technologies.
 ```
+
