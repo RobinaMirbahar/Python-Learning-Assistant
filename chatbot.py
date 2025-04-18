@@ -4,7 +4,7 @@ import google.generativeai as genai  # Google Generative AI library for Gemini m
 
 # UI setup for the Streamlit page
 st.set_page_config(page_title="Python Learning Bot", page_icon="🐍")  # Sets tab title and icon
-st.title("🐍 Python Learning Bot")  # Displays the main title
+st.title("🐍 Python Learning Assistant")  # Displays the main title
 st.markdown("Learn Python step by step using Gemini AI!")  # Adds a short description below the title
 
 # API Key input field for secure user access
