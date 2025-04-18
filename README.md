@@ -122,14 +122,24 @@ pip install google-generativeai
 
 ---
 
-## 🧪 Example Prompts
+## 🧪 Example Python Prompts
 
-Try asking:
+Once the chatbot is running, you can try asking any of the following Python-related questions to learn and explore:
 
-- `"Tell me a fun fact about AI"`
-- `"What's the difference between Gemini Pro and Gemini Flash?"`
-- `"Suggest a name for my tech startup!"`
-- `"Explain recursion in Python with code"`
+- "What is a lambda function in Python?"
+- "Explain list comprehensions with examples."**
+- "What is the difference between a tuple and a list?"
+- "How do you create a class in Python?"
+- "Explain recursion in Python with a code example."
+- "What are decorators in Python?"**
+- "How does Python handle memory management?"
+- "What is the purpose of the `self` keyword in Python?"
+- "How can you handle exceptions in Python?"
+- "What is the use of `map()` and `filter()` functions?"
+- "What are Python's built-in data types?"
+- "How does a Python dictionary differ from a list?"
+- "What is a generator in Python and how is it different from a list?"
+
 
 ---
 
