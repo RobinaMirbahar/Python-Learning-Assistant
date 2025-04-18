@@ -1,8 +1,4 @@
-Here’s the updated and enhanced `README.md` with your new section **"How to Create a `.streamlit` Folder for Secrets"** neatly integrated:
 
----
-
-```markdown
 # 🤖 Gemini Chatbot Template
 
 A simple and powerful chatbot built using **Google's Gemini API** and **Streamlit**.  
