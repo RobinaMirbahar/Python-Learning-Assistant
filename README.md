@@ -5,7 +5,7 @@ A simple and powerful chatbot built using **Google's Gemini API** and **Streamli
 This project demonstrates how to integrate **Gemini Pro** into a Streamlit app for interactive AI conversations.
 
 
-🌐 [Launch the Streamlit App](https://https://chatbot-gemini-simple.streamlit.app/) 🚀
+🌐 [Launch the Streamlit App](https://chatbot-gemini-simple.streamlit.app//) 🚀
 
 ---
 
