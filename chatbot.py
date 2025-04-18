@@ -37,4 +37,22 @@ if api_key:
             prompt = f"Explain this Python concept to a beginner with code examples and use cases: {user_input}"
 
             try:
-                response = model.generate_content(prompt)  # Get AI-generated_
+                response = model.generate_content(prompt)  # Get AI-generated response
+                if response and hasattr(response, 'text') and response.text:
+                    answer = response.text
+                else:
+                    answer = "❌ Sorry, I couldn't generate a valid response."
+            except Exception as e:
+                answer = f"⚠️ Error: {str(e)}"
+
+            # Store chat history
+            st.session_state.chat_history.append(("You", user_input))
+            st.session_state.chat_history.append(("Python Bot", answer))
+
+    # Display chat history
+    for sender, msg in st.session_state.chat_history:
+        with st.chat_message("user" if sender == "You" else "assistant"):
+            st.markdown(f"**{sender}:** {msg}")
+
+else:
+    st.info("🔐 Please enter your Gemini API key to start learning Python.")
