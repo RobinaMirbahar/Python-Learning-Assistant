@@ -162,7 +162,7 @@ gemini-chatbot/
 ## 🙌 Credits
 
 Created by **Robina Mirbahar**  
-Google Cloud Innovator Champion | Women Techmakers Ambassador  
+Google Cloud Innovator Champion | Women Techmakers Ambassador  | Google Developer Expert
 
 ---
 
