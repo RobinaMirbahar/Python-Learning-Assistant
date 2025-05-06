@@ -1,6 +1,4 @@
-Here's the complete, polished `README.md` for your Python Learning Assistant repository, perfectly matching your project structure and requirements:
 
-```markdown
 # 🐍 Python Learning Assistant
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://python-learning-assistant.streamlit.app/)
