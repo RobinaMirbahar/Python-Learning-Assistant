@@ -1,7 +1,4 @@
-streamlit>=1.32.0
+streamlit>=1.33.0
 google-generativeai>=0.3.0
 python-dotenv>=1.0.0
-fpdf2>=1.7
-package-a==1.2  # Taking your version
-package-b==2.0  # Keeping remote version
-package-c==3.0  # Keeping your new package
+fpdf2>=1.7.0
