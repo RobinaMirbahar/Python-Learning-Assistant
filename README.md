@@ -105,9 +105,6 @@ Pull requests are welcome! For major changes, please open an issue first.
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Credits
-Created and maintained by **Robina Mirbahar**  
-Google Cloud Innovator Champion | Women Techmakers Ambassador  
 
 ## 🙏 Credits
 Created and maintained by **Robina Mirbahar**  
