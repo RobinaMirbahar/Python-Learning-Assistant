@@ -4,6 +4,9 @@ import os
 import time
 from datetime import datetime
 from fpdf import FPDF
+from io import BytesIO
+import base64
+
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -12,7 +15,7 @@ except ImportError:
 
 # UI Setup
 st.set_page_config(
-    page_title="Python Learning Assistant", 
+    page_title="Python Learning Bot", 
     page_icon="🐍",
     layout="wide"
 )
@@ -124,8 +127,8 @@ if api_key:
             with st.chat_message("assistant"):
                 st.markdown(message.parts[0].text)
                 
-                # PDF Download Button - CORRECTED VERSION
-                if hasattr(message, 'parts') and message.parts:
+                # PDF Download Button - Only for the latest assistant message
+                if message == st.session_state.chat.history[-1] and message.role == "assistant":
                     if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
                         with st.spinner("Creating PDF..."):
                             try:
@@ -133,11 +136,21 @@ if api_key:
                                     st.session_state.get("last_question", ""),
                                     message.parts[0].text
                                 )
-                                pdf_output = pdf.output(dest='S')  # Removed .encode()
                                 
+                                # Create PDF bytes
+                                pdf_bytes = BytesIO()
+                                pdf.output(pdf_bytes)
+                                pdf_bytes.seek(0)
+                                
+                                # Display PDF in app
+                                base64_pdf = base64.b64encode(pdf_bytes.read()).decode('utf-8')
+                                pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+                                st.markdown(pdf_display, unsafe_allow_html=True)
+                                
+                                # Download button
                                 st.download_button(
-                                    label="⬇️ Download Now",
-                                    data=pdf_output,
+                                    label="⬇️ Download PDF",
+                                    data=pdf_bytes.getvalue(),
                                     file_name=f"python_lesson_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
                                     mime="application/pdf",
                                     key=f"dl_{time.time()}"
