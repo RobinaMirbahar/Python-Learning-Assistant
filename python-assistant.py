@@ -12,7 +12,7 @@ except ImportError:
 
 # UI Setup
 st.set_page_config(
-    page_title="Python Learning Bot", 
+    page_title="Python Learning Assistant", 
     page_icon="🐍",
     layout="wide"
 )
