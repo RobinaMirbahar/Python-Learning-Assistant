@@ -107,8 +107,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 ## 🙏 Credits
-Created and maintained by **Robina Mirbahar**  
-Google Cloud Innovator Champion | Women Techmakers Ambassador | GOOGLE DEVELOPER EXPERT
+✨ Created and maintained by Robina Mirbahar
+🏆 Google Cloud Innovator Champion | 👩‍💻 Women Techmakers Ambassador | 🚀 Google Developer Expert
 
 🔗 **Connect with me:**
 
