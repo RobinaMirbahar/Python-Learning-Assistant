@@ -6,7 +6,7 @@
 
 An interactive AI tutor powered by Google's Gemini API for learning Python at all skill levels.
 
-![App Screenshot](https://via.placeholder.com/800x400?text=Python+Learning+Assistant+Screenshot) *(placeholder image)*
+![App Screenshot](https://github.com/RobinaMirbahar/Python-Learning-Assistant/blob/main/Images/PLA.png?raw=true)
 
 ## 📂 Project Structure
 
