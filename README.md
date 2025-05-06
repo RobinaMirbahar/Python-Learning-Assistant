@@ -109,11 +109,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Created and maintained by **Robina Mirbahar**  
 Google Cloud Innovator Champion | Women Techmakers Ambassador  
 
-🔗 Connect with me:
-- [LinkedIn](https://www.linkedin.com/in/robinamirbahar/)
-- [Twitter](https://twitter.com/robinamirbahar)
-- [GitHub](https://github.com/yourusername)
+## 🙏 Credits
+Created and maintained by **Robina Mirbahar**  
+Google Cloud Innovator Champion | Women Techmakers Ambassador  
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/yourhandle)
-```
+🔗 **Connect with me:**
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/robinamirbahar/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://twitter.com/robinamirbahar" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+  </a>
+  <a href="https://github.com/robinamirbahar" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  
+</p>
+
 
