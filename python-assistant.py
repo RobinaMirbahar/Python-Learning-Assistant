@@ -40,7 +40,7 @@ with st.sidebar:
     
     st.markdown("### Model Settings")
     temperature = st.slider("Creativity (temperature)", 0.0, 1.0, 0.7)
-    max_tokens = st.slider("Max response length", 512, 8192, 2048, step=512)
+    max_tokens = st.slider("Max response length", 512, 8192, 4096, step=512)
     
     st.markdown("---")
     if st.button("🧹 Clear Chat History"):
@@ -133,9 +133,11 @@ if api_key:
                 st.markdown(message.parts[0].text)
                 
                 # PDF Download Button - Only for the latest assistant message
-                if message == st.session_state.chat.history[-1] and message.role == "assistant":  # Fixed typo here
-                    if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
-                        st.session_state.show_pdf = True
+                if message == st.session_state.chat.history[-1] and message.role == "assistant":
+                    col1, col2 = st.columns([1, 10])
+                    with col1:
+                        if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
+                            st.session_state.show_pdf = True
                     
                     if st.session_state.show_pdf:
                         with st.spinner("Creating PDF..."):
@@ -156,13 +158,14 @@ if api_key:
                                 st.markdown(pdf_display, unsafe_allow_html=True)
                                 
                                 # Download button
-                                st.download_button(
-                                    label="⬇️ Download PDF",
-                                    data=pdf_bytes.getvalue(),
-                                    file_name=f"python_lesson_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
-                                    mime="application/pdf",
-                                    key=f"dl_{time.time()}"
-                                )
+                                with col2:
+                                    st.download_button(
+                                        label="⬇️ Download PDF",
+                                        data=pdf_bytes.getvalue(),
+                                        file_name=f"python_lesson_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+                                        mime="application/pdf",
+                                        key=f"dl_{time.time()}"
+                                    )
                             except Exception as e:
                                 st.error(f"Failed to generate PDF: {str(e)}")
 
@@ -188,11 +191,23 @@ if api_key:
                     4. Practice suggestions
                     5. Common pitfalls to avoid"""
                     
-                    response = st.session_state.chat.send_message(full_prompt)
+                    response = st.session_state.chat.send_message(
+                        full_prompt,
+                        stream=True
+                    )
+                    
+                    response_text = ""
+                    container = st.empty()
+                    for chunk in response:
+                        response_text += chunk.text
+                        container.markdown(response_text + "▌")
+                    
+                    container.markdown(response_text)
                     response_time = time.time() - start_time
                     
-                    st.markdown(response.text)
-                    st.caption(f"Generated in {response_time:.2f}s using {st.session_state.model.model_name}")
+                    # Estimate token count (rough approximation)
+                    token_count = len(response_text.split())
+                    st.caption(f"Generated in {response_time:.2f}s | ~{token_count} tokens | Max: {max_tokens}")
                     
                 except Exception as e:
                     st.error(f"Error generating response: {str(e)}")
@@ -207,6 +222,7 @@ with st.expander("ℹ️ About This Assistant"):
     - Adaptive explanations for all skill levels
     - Real-time code examples
     - PDF download capability
+    - Streamed responses for better UX
     
     **Requirements:**
     ```bash
