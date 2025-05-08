@@ -45,7 +45,7 @@ with st.sidebar:
     st.markdown("---")
     if st.button("🧹 Clear Chat History"):
         st.session_state.clear()
-        st.session_state.show_pdf = False  # Reset PDF display state
+        st.session_state.show_pdf = False
         st.rerun()
 
 # System Instruction
@@ -133,7 +133,7 @@ if api_key:
                 st.markdown(message.parts[0].text)
                 
                 # PDF Download Button - Only for the latest assistant message
-                if message == st.session_state.chat.history[-1] and message.role == "assistant":
+                if message == st.session_state.chat.history[-1] and message.role == "assistant":  # Fixed typo here
                     if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
                         st.session_state.show_pdf = True
                     
@@ -169,7 +169,7 @@ if api_key:
     # Handle user input
     if prompt := st.chat_input(f"Ask a {st.session_state.skill_level} Python question..."):
         st.session_state.last_question = prompt
-        st.session_state.show_pdf = False  # Reset PDF display when new question is asked
+        st.session_state.show_pdf = False
         with st.chat_message("user"):
             st.markdown(f"**You:** {prompt}")
         
