@@ -124,7 +124,7 @@ if api_key:
 # Chat Interface
 if api_key:
     # Display chat history
-    for message in st.session_state.chat.history:
+    for i, message in enumerate(st.session_state.chat.history):
         if message.role == "user":
             with st.chat_message("user"):
                 st.markdown(f"**You:** {message.parts[0].text}")
@@ -133,11 +133,9 @@ if api_key:
                 st.markdown(message.parts[0].text)
                 
                 # PDF Download Button - Only for the latest assistant message
-                if message == st.session_state.chat.history[-1] and message.role == "assistant":
-                    col1, col2 = st.columns([1, 10])
-                    with col1:
-                        if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
-                            st.session_state.show_pdf = True
+                if i == len(st.session_state.chat.history) - 1 and message.role == "model":
+                    if st.button("📥 Generate PDF", key=f"pdf_{time.time()}"):
+                        st.session_state.show_pdf = True
                     
                     if st.session_state.show_pdf:
                         with st.spinner("Creating PDF..."):
@@ -158,14 +156,13 @@ if api_key:
                                 st.markdown(pdf_display, unsafe_allow_html=True)
                                 
                                 # Download button
-                                with col2:
-                                    st.download_button(
-                                        label="⬇️ Download PDF",
-                                        data=pdf_bytes.getvalue(),
-                                        file_name=f"python_lesson_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
-                                        mime="application/pdf",
-                                        key=f"dl_{time.time()}"
-                                    )
+                                st.download_button(
+                                    label="⬇️ Download PDF",
+                                    data=pdf_bytes.getvalue(),
+                                    file_name=f"python_lesson_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+                                    mime="application/pdf",
+                                    key=f"dl_{time.time()}"
+                                )
                             except Exception as e:
                                 st.error(f"Failed to generate PDF: {str(e)}")
 
