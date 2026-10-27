@@ -1,5 +1,47 @@
 # 🐍 Python Learning Assistant
 
+> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) (Google Developer Expert in Cloud & AI)  
+> **Focus:** Interactive AI-Powered Python Tutor (Variables to Metaclasses & 50+ Hands-On Exercises) with Streamlit & Google Gemini
+
+---
+
+## 🎯 Why I Built Python Learning Assistant (Engineering Purpose & Real-World Value)
+
+### 1. 🐍 Personalized Socratic Mentorship Over Copy-Paste Answers
+I built the Python Learning Assistant to guide learners from foundational syntax (`variables`, `loops`) to advanced software engineering (`decorators`, `generators`, `metaclasses`) using adaptive Socratic hints rather than just dumping solutions.
+
+### 2. 🧪 50+ Structured Coding Challenges with Live Feedback
+I curated more than 50 progressive exercises where the Gemini-powered evaluator inspects AST structure, edge cases, and PEP 8 style in real time.
+
+### 3. 🌱 Accessible Browser-First Learning Environment
+By packaging the tutor in a clean Streamlit interface, students and workshop attendees can practice Python interactively from any laptop or tablet.
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    subgraph UI ["1. Interactive Streamlit Learning Portal"]
+        U_Mod["Curriculum Selector (Basics ➔ OOP ➔ Metaclasses)"]
+        U_Code["Interactive Code Editor & 50+ Exercises"]
+        U_Chat["Socratic AI Mentor Q&A"]
+    end
+    subgraph Tutor ["2. Gemini Pedagogical Evaluation Engine"]
+        T_Check["Code Correctness & Edge-Case Grader"]
+        T_Hint["Adaptive Hint & Concept Visualizer"]
+        T_PEP["PEP 8 Idiomatic Style Coach"]
+    end
+    subgraph Progress ["3. Learner Mastery Tracking"]
+        P_State["Session Progress & Skill Badges"]
+    end
+    U_Mod --> U_Code --> T_Check
+    U_Chat --> T_Hint
+    T_Check --> T_Hint & T_PEP --> P_State
+```
+
+---
+
 <div align="center">
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://python-learning-assistant.streamlit.app/)
@@ -185,3 +227,22 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 <div align="center">
   <img src="https://raw.githubusercontent.com/RobinaMirbahar/RobinaMirbahar/main/ProfileImages/GithubBanner.svg" alt="Robina Mirbahar Banner" width="100%" />
 </div>
+
+<!-- AUTHOR_SIGNATURE_START -->
+---
+
+## 👩‍💻 About the Author
+
+**Robina Mirbahar — Google Cloud & AI Architect**  
+*Google Developer Expert (GDE) in Cloud & AI • Published Author • Multi-Agent Systems & Serverless GPU Builder*
+
+[![GitHub](https://img.shields.io/badge/GitHub-RobinaMirbahar-181717?style=for-the-badge&logo=github)](https://github.com/RobinaMirbahar)
+[![Medium](https://img.shields.io/badge/Medium-@robinamirbahar-000000?style=for-the-badge&logo=medium)](https://medium.com/@robinamirbahar)
+[![DEV.to](https://img.shields.io/badge/DEV.to-robinamirbahar-0A0A0A?style=for-the-badge&logo=devdotto)](https://dev.to/robinamirbahar)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Robina_Mirbahar-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/robina-mirbahar)
+[![GDE Profile](https://img.shields.io/badge/Google_Developer_Expert-Profile-4285F4?style=for-the-badge&logo=google)](https://g.dev/RobinaMirbahar)
+[![YouTube](https://img.shields.io/badge/YouTube-@RobinaMirbahar-FF0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@RobinaMirbahar)
+[![X](https://img.shields.io/badge/X-@RobinaMirbahar-000000?style=for-the-badge&logo=x)](https://x.com/RobinaMirbahar)
+[![Amazon Author](https://img.shields.io/badge/Amazon_Book-Cloud_Computing_Voyage-FF9900?style=for-the-badge&logo=amazon)](https://www.amazon.com/dp/B0D146249R)
+
+<!-- AUTHOR_SIGNATURE_END -->
