@@ -47,7 +47,7 @@ flowchart TD
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://python-learning-assistant.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini%20API-4285F4?logo=google&logoColor=white)](https://aistudio.google.com)
+[![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini%20API-4285F4?logo=google&logoColor=white)](https://aistudio.google.com?utm_campaign=deveco_gdemembers&utm_source=deveco)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/RobinaMirbahar/Python-Learning-Assistant/pulls)
 
 **An interactive AI-powered Python tutor — built for all skill levels.**  
@@ -78,7 +78,7 @@ Adaptive explanations. Live code examples. Instant feedback. Powered by Google G
 ### Prerequisites
 
 - Python **3.10+**
-- A free [Gemini API key](https://aistudio.google.com/app/apikey)
+- A free [Gemini API key](https://aistudio.google.com/app/apikey?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ### Installation
 
