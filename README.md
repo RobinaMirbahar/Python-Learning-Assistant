@@ -1,7 +1,8 @@
 # 🐍 Python Learning Assistant
 
 > **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) ([Google Developer Expert in Cloud & AI](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco) · Google Cloud Champion Innovator · Co-Author of [*AI Engineering*](https://www.amazon.com/dp/B0GWCZWCF4))  
-> **Focus:** Interactive AI-Powered Python Tutor (Variables to Metaclasses & 50+ Hands-On Exercises) with Streamlit & Google Gemini
+> 📚 **Architecture Track:** Interactive AI-Powered Python Tutor (50+ Hands-On Exercises from Variables to Metaclasses)  
+> **Core Stack:** [Google Gemini API](https://ai.google.dev/gemini-api/docs?utm_campaign=deveco_gdemembers&utm_source=deveco), Streamlit Interactive Workspace, and Python 3.
 
 ---
 
