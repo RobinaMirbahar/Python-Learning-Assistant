@@ -38,17 +38,6 @@ flowchart TD
     U_Mod --> U_Code --> T_Check
     U_Chat --> T_Hint
     T_Check --> T_Hint & T_PEP --> P_State
-    style UI fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style U_Mod fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style Selector fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
-    style U_Code fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
-    style U_Chat fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style Tutor fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style T_Check fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
-    style T_Hint fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
-    style T_PEP fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style Progress fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style P_State fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
 ```
 
 ---
